@@ -14,4 +14,4 @@ No upstream model code or checkpoints are vendored. Install/download them from t
 | Competition | https://aiprotein.sjtu.edu.cn/targets and https://aiprotein.sjtu.edu.cn/rules |
 | Modal | https://modal.com/docs/guide ; runtime and account-specific billing |
 
-Historical public target/reference provenance and limitations are retained in the example audit and historical target manifest. This private team snapshot grants no blanket license over third-party materials. Recheck licenses before redistribution outside the team.
+Historical public target/reference provenance and limitations are retained in the example audit and historical target manifest. This research snapshot grants no blanket license over third-party materials. Recheck licenses before redistribution outside the team.
