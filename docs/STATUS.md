@@ -30,7 +30,7 @@ The public rules specify novelty thresholds of at least80% aligned coverage and 
 
 ## Limits and next work
 
-- New Modal support is qualified only to the extent recorded in VERIFICATION, stage by stage.
+- The small historical RFD4 generation→Boltz-2/ipSAE Modal path passed. All35 tests and the offline example also passed from a fresh clone. See VERIFICATION.
 - Earth scripts retain original machine paths and historical settings. Their presence is source preservation, not a claim of general portability.
 - Full evidence archives, downloaded repositories, benchmark tables and model checkpoints are intentionally excluded. Selected historical report links may refer to those original local archives; they are not promised as included files. New evidence is downloaded from each Modal run.
 - Updated official-target prediction, complete portable pose/context audits, exact official-screen settings, broader ranking validation, VHH qualification, other target campaigns and official export remain unfinished.

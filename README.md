@@ -33,7 +33,7 @@ MODAL_PROFILE=my-profile modal run modal_app.py --stage generate --run-id alice-
 MODAL_PROFILE=my-profile modal run modal_app.py --stage evaluate --run-id alice-seed43-001
 ```
 
-Run `prepare` once per workspace to cache public pinned weights using a CPU worker. The other two stages each request one L40S, use a 15-minute worker timeout, and do not automatically retry. Preparation may take several minutes. Billable setup and worker time must be checked in Modal billing; model timing alone is not total cost. Account credits and caches are separate between workspaces.
+Run `prepare` once per workspace to cache public pinned weights using a CPU worker. The other two stages each request one GPU (L40S preferred, A10G or A100 fallback), use a 15-minute worker timeout, and do not automatically retry. Preparation may take several minutes. Billable setup and worker time must be checked in Modal billing; model timing alone is not total cost. Account credits and caches are separate between workspaces.
 
 Generation uses pinned RFD4-Proteina; evaluation uses Boltz-2 and directional ipSAE. Results and structure archives are saved under `results/<run-id>/`, which is ignored by Git. The worker also retains outputs on the workspace's `helixbridge-model-cache` Volume. Reusing an experiment ID with existing outputs is refused. This is a reproducibility pilot; see STATUS for observed qualification and limitations.
 

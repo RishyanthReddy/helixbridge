@@ -12,6 +12,7 @@ rfd_image = base.run_commands(
     "git clone https://github.com/RosettaCommons/RFD4-Proteina.git /opt/RFD4-Proteina",
     f"git -C /opt/RFD4-Proteina checkout {RFD_REV}",
     "uv pip install --system --no-sources --torch-backend cu132 'torch==2.14.1' 'atomworks[ml,openbabel]==3.0.4' 'biotite==1.6.0' -e /opt/RFD4-Proteina",
+ ).apt_install("libxrender1", "libxext6", "libsm6", "libglib2.0-0").run_commands(
     "python -c 'from rfproteina.generate import run_generation'",
 ).add_local_dir(HERE / "pipeline", "/opt/pipeline", ignore=["data/", "__pycache__/", "*.pyc"]).add_local_dir(HERE / "examples", "/opt/examples")
 boltz_image = base.uv_pip_install("boltz==2.2.1", "huggingface-hub", "biopython").run_commands(
@@ -70,7 +71,7 @@ def archive_result(directory):
     return stream.getvalue()
 
 
-@app.function(image=rfd_image, gpu="L40S", cpu=4, memory=32768, volumes={"/cache": cache}, timeout=900, retries=0, max_containers=1, scaledown_window=2)
+@app.function(image=rfd_image, gpu=["L40S", "A10G", "A100"], cpu=4, memory=32768, volumes={"/cache": cache}, timeout=900, retries=0, max_containers=1, scaledown_window=2)
 def generate(run_id: str, seed: int):
     import subprocess, sys, time
     root, pipeline = stage_root(run_id)
@@ -79,10 +80,10 @@ def generate(run_id: str, seed: int):
     subprocess.run([sys.executable, str(pipeline / "scripts/rfd4-il7ra-seed.py"), str(pipeline / "data/targets/il7ra/rfd4-reference/audit.json"), str(output), str(seed)], check=True, timeout=780)
     (output / "environment.txt").write_text(subprocess.check_output(["uv", "pip", "freeze", "--system"], text=True))
     cache.commit()
-    return {"audit": json.loads((output / "audit.json").read_text()), "worker_seconds": time.monotonic()-started, "archive": archive_result(output)}
+    return {"audit": json.loads((output / "audit.json").read_text()), "worker_seconds": time.monotonic()-started, "gpu": __import__("torch").cuda.get_device_name(), "archive": archive_result(output)}
 
 
-@app.function(image=boltz_image, gpu="L40S", cpu=4, memory=32768, volumes={"/cache": cache}, timeout=900, retries=0, max_containers=1, scaledown_window=2)
+@app.function(image=boltz_image, gpu=["L40S", "A10G", "A100"], cpu=4, memory=32768, volumes={"/cache": cache}, timeout=900, retries=0, max_containers=1, scaledown_window=2)
 def evaluate(run_id: str):
     import subprocess, sys, shutil, time
     cache.reload()
@@ -97,7 +98,7 @@ def evaluate(run_id: str):
     subprocess.run([sys.executable, str(pipeline / "scripts/boltz-predict.py"), str(root / "request.json"), str(output)], check=True, timeout=780)
     (output / "environment.txt").write_text(subprocess.check_output(["uv", "pip", "freeze", "--system"], text=True))
     cache.commit()
-    return {"metrics": json.loads((output / "metrics.json").read_text()), "worker_seconds": time.monotonic()-started, "archive": archive_result(output)}
+    return {"metrics": json.loads((output / "metrics.json").read_text()), "worker_seconds": time.monotonic()-started, "gpu": __import__("torch").cuda.get_device_name(), "archive": archive_result(output)}
 
 
 @app.local_entrypoint()

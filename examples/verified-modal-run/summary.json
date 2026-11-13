@@ -1,0 +1,42 @@
+{
+  "role": "historical_rehearsal_only; not submission eligible or measured binding",
+  "date": "2026-11-13",
+  "seed": 43,
+  "target_interval": "1-236 historical; current competition21-239",
+  "binder_length": 60,
+  "binder_sequence": "SVQEKLQEIQASLHSKVAKENVDEFKSLLEKANEENDLSVLLQASNPELLSLIKEALNSL",
+  "generation_seconds": 58.073256587,
+  "generation_peak_reserved_mib": 2564.0,
+  "refold_gpu": "NVIDIA A10G",
+  "refold_worker_seconds": 68.244186213,
+  "iptm": 0.9454354643821716,
+  "ipsae": {
+    "pae_cutoff": 10,
+    "distance_cutoff": 10,
+    "pairwise": [
+      {
+        "chain1": "A",
+        "chain2": "B",
+        "type": "asym",
+        "ipsae": 0.777032
+      },
+      {
+        "chain1": "B",
+        "chain2": "A",
+        "type": "asym",
+        "ipsae": 0.784061
+      },
+      {
+        "chain1": "A",
+        "chain2": "B",
+        "type": "max",
+        "ipsae": 0.784061
+      }
+    ],
+    "script_sha256": "10cf9b08c68c91e06cb28526cf2026f47a3980c9048fd3226d13e3304eaf1c27",
+    "official_aggregation": "unconfirmed",
+    "ignored_auxiliary_columns": "ipTM_af placeholder and pLDDT-based pDockQ/pDockQ2; adapter supplies PAE only"
+  },
+  "generation_archive_sha256": "e51e0c08eaa4171857fd46358463c1a671d108fbd5685077be708c794c492608",
+  "evaluation_archive_sha256": "53f5bff9254ac6154e608e4e754989e1d222c889ba3d6daf29394311cc7f87da"
+}
