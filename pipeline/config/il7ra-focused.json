@@ -1,0 +1,25 @@
+{
+  "targets": [
+    {
+      "name": "il7ra_WT_shipped_reference",
+      "target_path": "/cfs/earth/scratch/mekalris/changjiang-2026/src/BindCraft2/settings/target/structures/hIL7RA.pdb",
+      "chains": "A",
+      "hotspots": "100,101,102,158,159,161,211,212,213,214",
+      "coldspots": "131-134,139,196-200,219-231"
+    }
+  ],
+  "modality": "binder",
+  "binder_lengths": [
+    60,
+    60
+  ],
+  "number_of_final_designs": 1,
+  "max_trajectories": 2,
+  "campaign_seed": 42,
+  "workers_per_gpu": 1,
+  "design_workers": 1,
+  "forced_targeting": true,
+  "save_failed_trajectories": true,
+  "save_failed_refolds": true,
+  "project_folder": "/cfs/earth/scratch/mekalris/changjiang-2026/results/il7ra-focused-v2/bc2"
+}

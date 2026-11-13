@@ -1,0 +1,29 @@
+{
+  "id": "il7ra",
+  "uniprot": "P16871-1",
+  "start": 1,
+  "end": 236,
+  "first": "M",
+  "last": "G",
+  "format": "minibinder",
+  "min_length": 40,
+  "max_length": 100,
+  "pdb": "3DI3",
+  "chains": [
+    "B"
+  ],
+  "requirement": null,
+  "sequence": "MTILGTTFGMVFSLLQVVSGESGYAQNGDLEDAELDDYSFSCYSQLEVNGSQHSLTCAFEDPDVNITNLEFEICGALVEVKCLNFRKLQEIYFIETKKFLLIGKSNICVKVGEKSLTCKKIDLTTIVKPEAPFDLSVVYREGANDFVVTFNTSHLQKKYVKVLMHDVAYRQEKDENKWTHVNLSSTKLTLLQRKLQPAAMYEIKVRSIPDHYFKGFWSEWSPSYYFRTPEINNSSG",
+  "sequence_sha256": "fa77ee36dd0e89c8ee484f1f27a99a9083d7690d6c0f65061ed78ad7c84b6c8f",
+  "fasta_sha256": "7e37f7481c97cba9294af9909d0e4f94baf3487a6870c3630ded14e08c6b28a6",
+  "source_url": "https://rest.uniprot.org/uniprotkb/P16871.json",
+  "source_sha256": "f0061b2cc353098b885bab25600983ea621740e858322c0968538db3478e92bc",
+  "entry_audit": {
+    "firstPublicDate": "1990-08-01",
+    "lastAnnotationUpdateDate": "2026-09-02",
+    "lastSequenceUpdateDate": "2018-09-12",
+    "entryVersion": 232,
+    "sequenceVersion": 3
+  },
+  "construct_status": "official_sequence_range; experimental_processing_unconfirmed"
+}

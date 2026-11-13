@@ -1,0 +1,20 @@
+{
+  "reviewed": "2026-11-01",
+  "initial_track": "il7ra",
+  "next_track_proposed": "tl1a",
+  "team_status_assumption": "open_registration",
+  "cluster": {"ssh_alias":"earth-hpc","root":"/cfs/earth/scratch/mekalris/changjiang-2026","partition":"earth-4","gpu_request":"gpu:l40s:1","driver":"610.57.04","visible_memory_mib":46068,"preflight_job":"1079583"},
+  "confirmed": {"submission_deadline_date":"2026-11-30","per_track_max":20,"minibinder_lengths":[40,100],"vhh_lengths":[100,150],"screen":"ESMFold2/ipSAE","seeds":1,"samples":1,"templates":false,"target_msa":true,"binder_msa":false,"ranking":"best experimental KD per team/track"},
+  "open_questions": [
+    {"id":"screen_protocol","blocks":"official-equivalence claim","detail":"Checkpoint, seed value, MSA generation, chain stoichiometry, inference settings and ipSAE aggregation/cutoffs unspecified"},
+    {"id":"target_processing","blocks":"competition-ready full-target interpretation","detail":"Exact expression constructs, signal processing, glycans and assembly not supplied; reference PDB may differ from UniProt range"},
+    {"id":"portal_locking","blocks":"submission","detail":"Both editable-until-deadline and confirmation-lock language appear"},
+    {"id":"deadline_timezone","blocks":"final scheduling","detail":"Exact hour and timezone unspecified"},
+    {"id":"csv_schema","blocks":"official exporter","detail":"Public pages inspected do not expose the CSV column template"},
+    {"id":"vhh_scaffold_policy","blocks":"VHH campaign eligibility review","detail":"Permitted generic frameworks and CDR duplicate numbering convention unspecified"},
+    {"id":"glp1r_agonism","blocks":"GLP-1R campaign eligibility review","detail":"Agonism assay and role in main-rank eligibility unspecified"}
+  ],
+  "implementation_route":"No Antigravity tools were available; local implementation proceeds under the user's explicit start instruction.",
+  "gpu_budget_initial":"One five-minute hardware check completed; bounded later model pilots only. No large campaign allocation yet.",
+  "optional_branches":"deferred_until_baseline_completion"
+}

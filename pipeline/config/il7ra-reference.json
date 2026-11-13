@@ -1,0 +1,22 @@
+{
+  "targets": [
+    {
+      "name": "il7ra_reference_3DI3_B",
+      "target_path": "/cfs/earth/scratch/mekalris/changjiang-2026/src/pipeline/data/targets/il7ra/reference_rehearsal.pdb",
+      "chains": "A"
+    }
+  ],
+  "modality": "binder",
+  "binder_lengths": [
+    60,
+    60
+  ],
+  "number_of_final_designs": 1,
+  "max_trajectories": 2,
+  "campaign_seed": 42,
+  "workers_per_gpu": 1,
+  "design_workers": 1,
+  "save_failed_trajectories": true,
+  "save_failed_refolds": true,
+  "project_folder": "/cfs/earth/scratch/mekalris/changjiang-2026/results/il7ra-reference-v1/bc2"
+}

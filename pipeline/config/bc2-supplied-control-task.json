@@ -1,0 +1,35 @@
+{
+  "cwd": "/cfs/earth/scratch/mekalris/changjiang-2026/src/BindCraft2",
+  "revision": "b6fb3ae15ab6a702f1156cffc11bcc3323c2fd06",
+  "command": [
+    "/cfs/earth/scratch/mekalris/changjiang-2026/src/BindCraft2/.venv/bin/bindcraft",
+    "design",
+    "/cfs/earth/scratch/mekalris/changjiang-2026/src/pipeline/config/bc2-supplied-control.json"
+  ],
+  "timeout_seconds": 3300,
+  "inputs": [
+    "/cfs/earth/scratch/mekalris/changjiang-2026/src/pipeline/config/bc2-supplied-control.json",
+    "/cfs/earth/scratch/mekalris/changjiang-2026/src/BindCraft2/settings/target/hPDL1.json",
+    "/cfs/earth/scratch/mekalris/changjiang-2026/src/BindCraft2/settings/target/structures/hPDL1.pdb",
+    "/cfs/earth/scratch/mekalris/changjiang-2026/src/BindCraft2/settings/core/benchmark.json",
+    "/cfs/earth/scratch/mekalris/changjiang-2026/env/bc2-freeze.txt",
+    "/cfs/earth/scratch/mekalris/changjiang-2026/env/bc2-checkpoint-sha256.txt",
+    "/cfs/earth/scratch/mekalris/changjiang-2026/src/pipeline/slurm/run-stage.sbatch"
+  ],
+  "outputs": [
+    {
+      "path": "/cfs/earth/scratch/mekalris/changjiang-2026/results/bc2-supplied-control-v1/bc2/campaign_metadata.json",
+      "kind": "json"
+    },
+    {
+      "path": "/cfs/earth/scratch/mekalris/changjiang-2026/results/bc2-supplied-control-v1/bc2/1_Trajectories/!_Trajectories.csv",
+      "kind": "csv",
+      "columns": [
+        "trajectory"
+      ],
+      "min_rows": 1
+    }
+  ],
+  "state": "/cfs/earth/scratch/mekalris/changjiang-2026/results/bc2-supplied-control-v1/task-state.json",
+  "log": "/cfs/earth/scratch/mekalris/changjiang-2026/results/bc2-supplied-control-v1/model.log"
+}

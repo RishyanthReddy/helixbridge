@@ -1,0 +1,50 @@
+{
+  "cwd": "/cfs/earth/scratch/mekalris/changjiang-2026/src/pipeline",
+  "revision": "esm==3.4.1.post1; ipsae@6174cf9e71cb1bd660cc805856a18c4871a6dec3; matching CPython 3.12.15 headers via CPATH; resource instrumentation only; no score-based sample selection",
+  "command": [
+    "/cfs/earth/scratch/mekalris/changjiang-2026/env/esmfold2/bin/python",
+    "scripts/esmfold2-control.py",
+    "data/controls/il7-il7ra/input.json",
+    "/cfs/earth/scratch/mekalris/changjiang-2026/results/esmfold2-control-v3"
+  ],
+  "timeout_seconds": 3300,
+  "inputs": [
+    "scripts/esmfold2-control.py",
+    "data/controls/il7-il7ra/input.json",
+    "data/targets/il7ra/msa/target.a3m",
+    "/cfs/earth/scratch/mekalris/changjiang-2026/env/esmfold2-freeze.txt",
+    "/cfs/earth/scratch/mekalris/changjiang-2026/env/esmfold2-checkpoints.json",
+    "/cfs/earth/scratch/mekalris/changjiang-2026/src/IPSAE/ipsae.py",
+    "/cfs/earth/scratch/mekalris/changjiang-2026/env/python-include.txt",
+    "slurm/run-stage.sbatch"
+  ],
+  "outputs": [
+    {
+      "path": "/cfs/earth/scratch/mekalris/changjiang-2026/results/esmfold2-control-v3/metrics.json",
+      "kind": "metrics_json",
+      "finite_keys": [
+        "ptm",
+        "iptm",
+        "peak_allocated_mib",
+        "fold_seconds",
+        "host_peak_rss_mib",
+        "cpu_user_seconds",
+        "cpu_system_seconds"
+      ]
+    },
+    {
+      "path": "/cfs/earth/scratch/mekalris/changjiang-2026/results/esmfold2-control-v3/model.cif",
+      "kind": "file"
+    },
+    {
+      "path": "/cfs/earth/scratch/mekalris/changjiang-2026/results/esmfold2-control-v3/model_10_10.txt",
+      "kind": "file"
+    },
+    {
+      "path": "/cfs/earth/scratch/mekalris/changjiang-2026/results/esmfold2-control-v3/raw.npz",
+      "kind": "file"
+    }
+  ],
+  "state": "/cfs/earth/scratch/mekalris/changjiang-2026/results/esmfold2-control-v3/task-state.json",
+  "log": "/cfs/earth/scratch/mekalris/changjiang-2026/results/esmfold2-control-v3/model.log"
+}

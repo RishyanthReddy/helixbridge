@@ -1,0 +1,2 @@
+# Preserve byte-identical scientific fixtures, including their original spacing.
+*.cif -whitespace

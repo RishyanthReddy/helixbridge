@@ -1,0 +1,38 @@
+{
+  "cwd": "/cfs/earth/scratch/mekalris/changjiang-2026/src/pipeline",
+  "revision": "rfd4-proteina==0.0.3@ddd934f7e6b86f7582ce487d5b19f6c526c644b5",
+  "command": [
+    "/cfs/earth/scratch/mekalris/changjiang-2026/env/rfd4/bin/python",
+    "scripts/rfd4-il7ra.py",
+    "data/targets/il7ra/rfd4-reference/audit.json",
+    "/cfs/earth/scratch/mekalris/changjiang-2026/results/rfd4-il7ra-v1/prediction"
+  ],
+  "timeout_seconds": 3300,
+  "inputs": [
+    "scripts/rfd4-il7ra.py",
+    "data/targets/il7ra/rfd4-reference/audit.json",
+    "data/targets/il7ra/rfd4-reference/target.cif",
+    "data/targets/il7ra/rfd4-reference/conditions.json",
+    "data/targets/il7ra/manifest.json",
+    "/cfs/earth/scratch/mekalris/changjiang-2026/env/rfd4-freeze.txt",
+    "/cfs/earth/scratch/mekalris/changjiang-2026/env/rfd4-checkpoints.json",
+    "slurm/run-stage.sbatch"
+  ],
+  "outputs": [
+    {
+      "path": "/cfs/earth/scratch/mekalris/changjiang-2026/results/rfd4-il7ra-v1/prediction/audit.json",
+      "kind": "metrics_json",
+      "finite_keys": [
+        "generation_seconds",
+        "peak_reserved_mib",
+        "host_peak_rss_mib"
+      ]
+    },
+    {
+      "path": "/cfs/earth/scratch/mekalris/changjiang-2026/results/rfd4-il7ra-v1/prediction/model.cif",
+      "kind": "file"
+    }
+  ],
+  "state": "/cfs/earth/scratch/mekalris/changjiang-2026/results/rfd4-il7ra-v1/task-state.json",
+  "log": "/cfs/earth/scratch/mekalris/changjiang-2026/results/rfd4-il7ra-v1/model.log"
+}

@@ -1,0 +1,17 @@
+{
+  "core": "benchmark",
+  "target": "hPDL1",
+  "modality": "binder",
+  "binder_lengths": [
+    60,
+    60
+  ],
+  "number_of_final_designs": 1,
+  "max_trajectories": 2,
+  "campaign_seed": 42,
+  "workers_per_gpu": 1,
+  "design_workers": 1,
+  "save_failed_refolds": true,
+  "save_failed_trajectories": true,
+  "project_folder": "/cfs/earth/scratch/mekalris/changjiang-2026/results/bc2-supplied-control-v1/bc2"
+}

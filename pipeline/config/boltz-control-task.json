@@ -1,0 +1,51 @@
+{
+  "cwd": "/cfs/earth/scratch/mekalris/changjiang-2026/src/pipeline",
+  "revision": "boltz==2.2.1; ipsae@6174cf9e71cb1bd660cc805856a18c4871a6dec3",
+  "command": [
+    "/cfs/earth/scratch/mekalris/changjiang-2026/env/boltz/bin/python",
+    "scripts/boltz-predict.py",
+    "data/controls/il7-il7ra/input.json",
+    "/cfs/earth/scratch/mekalris/changjiang-2026/results/boltz-control-v1/prediction"
+  ],
+  "timeout_seconds": 3300,
+  "inputs": [
+    "scripts/boltz-predict.py",
+    "data/controls/il7-il7ra/input.json",
+    "/cfs/earth/scratch/mekalris/changjiang-2026/env/boltz-freeze.txt",
+    "/cfs/earth/scratch/mekalris/changjiang-2026/env/boltz-checkpoints.json",
+    "slurm/run-stage.sbatch",
+    "data/targets/il7ra/msa/target.a3m",
+    "/cfs/earth/scratch/mekalris/changjiang-2026/src/IPSAE/ipsae.py"
+  ],
+  "outputs": [
+    {
+      "path": "/cfs/earth/scratch/mekalris/changjiang-2026/results/boltz-control-v1/prediction/metrics.json",
+      "kind": "metrics_json",
+      "finite_keys": [
+        "iptm",
+        "ptm",
+        "prediction_seconds",
+        "peak_reserved_mib",
+        "host_peak_rss_mib"
+      ]
+    },
+    {
+      "path": "/cfs/earth/scratch/mekalris/changjiang-2026/results/boltz-control-v1/prediction/model.cif",
+      "kind": "file"
+    },
+    {
+      "path": "/cfs/earth/scratch/mekalris/changjiang-2026/results/boltz-control-v1/prediction/pae.json",
+      "kind": "file"
+    },
+    {
+      "path": "/cfs/earth/scratch/mekalris/changjiang-2026/results/boltz-control-v1/prediction/model_10_10.txt",
+      "kind": "file"
+    },
+    {
+      "path": "/cfs/earth/scratch/mekalris/changjiang-2026/results/boltz-control-v1/prediction/boltz_results_input/predictions/input/pae_input_model_0.npz",
+      "kind": "file"
+    }
+  ],
+  "state": "/cfs/earth/scratch/mekalris/changjiang-2026/results/boltz-control-v1/task-state.json",
+  "log": "/cfs/earth/scratch/mekalris/changjiang-2026/results/boltz-control-v1/model.log"
+}

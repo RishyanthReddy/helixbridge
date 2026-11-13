@@ -1,0 +1,15 @@
+{
+  "rules_reviewed": "2026-11-01",
+  "sources": ["https://aiprotein.sjtu.edu.cn/targets", "https://aiprotein.sjtu.edu.cn/rules"],
+  "targets": [
+    {"id":"egfr","uniprot":"P00533-1","start":1,"end":645,"first":"M","last":"S","format":"VHH","min_length":100,"max_length":150,"pdb":"6ARU","chains":["A"],"requirement":"affinity_at_pH_6.0"},
+    {"id":"tnfa","uniprot":"P01375","start":77,"end":233,"first":"V","last":"L","format":"VHH","min_length":100,"max_length":150,"pdb":"1TNF","chains":["A","B","C"],"requirement":null},
+    {"id":"glp1r","uniprot":"P43220","start":21,"end":139,"first":"A","last":"E","format":"VHH","min_length":100,"max_length":150,"pdb":"6X18","chains":["R"],"requirement":"agonist; eligibility/assay clarification pending"},
+    {"id":"tfr1","uniprot":"P02786","start":89,"end":760,"first":"C","last":"F","format":"VHH","min_length":100,"max_length":150,"pdb":"11QC","chains":["A","B"],"requirement":null},
+    {"id":"tl1a","uniprot":"O95150","start":72,"end":251,"first":"L","last":"L","format":"minibinder","min_length":40,"max_length":100,"pdb":"2RE9","chains":["A","B","C"],"requirement":null},
+    {"id":"tnfr1","uniprot":"P19438-1","start":1,"end":211,"first":"M","last":"T","format":"VHH","min_length":100,"max_length":150,"pdb":"9S3I","chains":["A"],"requirement":null},
+    {"id":"il7ra","uniprot":"P16871-1","start":1,"end":236,"first":"M","last":"G","format":"minibinder","min_length":40,"max_length":100,"pdb":"3DI3","chains":["B"],"requirement":null}
+  ],
+  "official_screen": {"model":"ESMFold2","metric":"ipSAE","seeds":1,"samples":1,"templates":false,"target_msa":true,"binder_msa":false,"status":"implementation_and_parameters_unconfirmed"},
+  "max_candidates_per_track":20
+}

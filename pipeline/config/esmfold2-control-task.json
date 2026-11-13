@@ -1,0 +1,45 @@
+{
+  "cwd": "/cfs/earth/scratch/mekalris/changjiang-2026/src/pipeline",
+  "revision": "esm==3.4.1.post1; ipsae@6174cf9e71cb1bd660cc805856a18c4871a6dec3",
+  "command": [
+    "/cfs/earth/scratch/mekalris/changjiang-2026/env/esmfold2/bin/python",
+    "scripts/esmfold2-control.py",
+    "data/controls/il7-il7ra/input.json",
+    "/cfs/earth/scratch/mekalris/changjiang-2026/results/esmfold2-control-v1"
+  ],
+  "timeout_seconds": 3300,
+  "inputs": [
+    "scripts/esmfold2-control.py",
+    "data/controls/il7-il7ra/input.json",
+    "data/targets/il7ra/msa/target.a3m",
+    "/cfs/earth/scratch/mekalris/changjiang-2026/env/esmfold2-freeze.txt",
+    "/cfs/earth/scratch/mekalris/changjiang-2026/env/esmfold2-checkpoints.json",
+    "/cfs/earth/scratch/mekalris/changjiang-2026/src/IPSAE/ipsae.py"
+  ],
+  "outputs": [
+    {
+      "path": "/cfs/earth/scratch/mekalris/changjiang-2026/results/esmfold2-control-v1/metrics.json",
+      "kind": "metrics_json",
+      "finite_keys": [
+        "ptm",
+        "iptm",
+        "peak_allocated_mib",
+        "fold_seconds"
+      ]
+    },
+    {
+      "path": "/cfs/earth/scratch/mekalris/changjiang-2026/results/esmfold2-control-v1/model.cif",
+      "kind": "file"
+    },
+    {
+      "path": "/cfs/earth/scratch/mekalris/changjiang-2026/results/esmfold2-control-v1/model_10_10.txt",
+      "kind": "file"
+    },
+    {
+      "path": "/cfs/earth/scratch/mekalris/changjiang-2026/results/esmfold2-control-v1/raw.npz",
+      "kind": "file"
+    }
+  ],
+  "state": "/cfs/earth/scratch/mekalris/changjiang-2026/results/esmfold2-control-v1/task-state.json",
+  "log": "/cfs/earth/scratch/mekalris/changjiang-2026/results/esmfold2-control-v1/model.log"
+}

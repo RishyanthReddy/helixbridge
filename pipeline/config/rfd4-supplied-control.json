@@ -1,0 +1,10 @@
+{
+  "binder": {
+    "input": "../../RFD4-Proteina/docs/examples/inputs/5o45_cropped.cif.zst",
+    "contig": "60, /0, A17-131",
+    "conditions": {
+      "C_CRDGRP": {"1": [{"select": "sel('A/*/*/[N,CA,C,O]')"}]},
+      "C_SEQ": {"true": [{"select": "sel('A')"}]}
+    }
+  }
+}
